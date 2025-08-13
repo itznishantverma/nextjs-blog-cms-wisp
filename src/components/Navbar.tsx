@@ -3,22 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { 
-  Search, 
-  Menu, 
-  X, 
-  User, 
-  Settings, 
-  LogOut, 
-  Dashboard,
-  BookOpen,
-  PenTool,
-  Brain,
-  Calendar,
-  Sun,
-  Moon,
-  ChevronDown
-} from 'lucide-react'
+import { Search, Menu, X, User, Settings, LogOut, LayoutDashboard as Dashboard, BookOpen, PenTool, Brain, Calendar, Sun, Moon, ChevronDown } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
