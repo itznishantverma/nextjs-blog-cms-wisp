@@ -5,22 +5,19 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: {
-    absolute: config.blog.metadata.title.absolute,
-    default: config.blog.metadata.title.default,
-    template: config.blog.metadata.title.template,
-  },
-  description: config.blog.metadata.description,
+  title: "AelVorm - Your Source for News, Knowledge & Insights",
+  description: "Stay informed with comprehensive news coverage, expert analysis, interactive quizzes, and engaging content across technology, politics, science, and more.",
   openGraph: {
-    title: config.blog.metadata.title.default,
-    description: config.blog.metadata.description,
+    title: "AelVorm - Your Source for News, Knowledge & Insights",
+    description: "Stay informed with comprehensive news coverage, expert analysis, interactive quizzes, and engaging content across technology, politics, science, and more.",
     images: [
       signOgImageUrl({
-        title: config.blog.name,
+        title: "AelVorm",
       }),
     ],
   },
@@ -41,6 +38,7 @@ export default function RootLayout({
       >
         <Providers>
           <main>{children}</main>
+          <Toaster />
         </Providers>
       </body>
     </html>
